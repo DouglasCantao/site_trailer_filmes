@@ -7,14 +7,16 @@ final_fantasy = Movie('Final Fantasy',
                       'https://www.youtube.com/watch?v=wut2am39z-c',
                       'Continuando a história baseada no jogo de sucesso de ' +
                       'PlayStation Final Fantasy VII...',
-                      'https://bit.ly/2Eu0WJM')
+                      'https://bit.ly/2Eu0WJM',
+                      'tt0385700')
 
 
 django = Movie('Django Unchained',
                'https://www.youtube.com/watch?v=_iH0UBYDI4g',
                'É um filme de aventura e faroeste estadunidense de 2012 ' +
                'escrito e dirigido por Quentin Tarantino...',
-               'https://bit.ly/2PuUuDn')
+               'https://bit.ly/2PuUuDn',
+               'tt1853728')
 
 
 inception = Movie('Inception',
@@ -23,7 +25,8 @@ inception = Movie('Inception',
                   'rouba segredos do subconsciente. As habilidades ' +
                   'especiais de Cobb fazem com que ele seja procurado ' +
                   'pelo mundo...',
-                  'https://bit.ly/2C93RVC')
+                  'https://bit.ly/2C93RVC',
+                  'tt1375666')
 
 
 movies = [django, final_fantasy, inception]

@@ -32,9 +32,10 @@
             margin-bottom: 20px;
             padding-top: 20px;
         }
-        .movie-tile:hover {
+        .movie-tile:hover{
             background-color: #EEE;
             cursor: pointer;
+            color: #333;
         }
         .scale-media {
             padding-bottom: 56.25%;
@@ -50,28 +51,27 @@
             background-color: white;
         }
 
-        .footer-item{
+        .img-movie{
+            display: inline-block;
+        }
+
+        #imdb{
+            border-radius: 70px;
+            display: flex;
+        }
+
+        #rating{
+            color: #ffc433;
+            font-size: 20px;
+            padding-left: 5px;
+        }
+
+        .rating-items{
             display: flex;
             justify-content: end;
             align-items: center;
-
         }
 
-        #span-text{
-            color: #EEE;
-            font-size: 10px;
-            padding-right: 5px;
-
-        }
-
-        #img-author{
-            width: 4%;
-            margin-right: 5px;
-        }
-
-        #link-github{
-            text-decoration: none;
-        }
     </style>
     <script type="text/javascript" charset="utf-8">
         // Pause the video when the modal is closed
@@ -129,24 +129,38 @@
     <div class="container">
       
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="_iH0UBYDI4g" data-toggle="modal" data-target="#trailer">
-    <img src="https://bit.ly/2PuUuDn" width="220" height="342">
+    <div class="img-movie">
+        <img src="https://bit.ly/2PuUuDn" width="220" height="342">
+            <div class="rating-items">
+                <img id="imdb" src="img/imdb_icon.jpg" width="50px" height="40px">
+                <span id="rating"><l4>8.0</l4></span>
+            </div>
+    </div>
     <h2>Django Unchained</h2>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="wut2am39z-c" data-toggle="modal" data-target="#trailer">
-    <img src="https://bit.ly/2Eu0WJM" width="220" height="342">
+    <div class="img-movie">
+        <img src="https://bit.ly/2Eu0WJM" width="220" height="342">
+            <div class="rating-items">
+                <img id="imdb" src="img/imdb_icon.jpg" width="50px" height="40px">
+                <span id="rating"><l4>6.8</l4></span>
+            </div>
+    </div>
     <h2>Final Fantasy</h2>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="2wd_FjobppI" data-toggle="modal" data-target="#trailer">
-    <img src="https://bit.ly/2C93RVC" width="220" height="342">
+    <div class="img-movie">
+        <img src="https://bit.ly/2C93RVC" width="220" height="342">
+            <div class="rating-items">
+                <img id="imdb" src="img/imdb_icon.jpg" width="50px" height="40px">
+                <span id="rating"><l4>8.2</l4></span>
+            </div>
+    </div>
     <h2>Inception</h2>
 </div>
 
     </div>
   </body>
-  <footer class="footer-item">
-    <a id="link-github" href="https://github.com/DouglasCantao" target="_blank"><span id="span-text">Github: @DouglasCantao</span></a>
-    <img id="img-author" src="img/doug.jpeg"/>
-  </footer>
 </html>

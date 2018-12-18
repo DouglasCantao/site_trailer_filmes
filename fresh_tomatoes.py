@@ -37,9 +37,10 @@ main_page_head = '''
             margin-bottom: 20px;
             padding-top: 20px;
         }
-        .movie-tile:hover {
+        .movie-tile:hover{
             background-color: #EEE;
             cursor: pointer;
+            color: #333;
         }
         .scale-media {
             padding-bottom: 56.25%;
@@ -55,28 +56,27 @@ main_page_head = '''
             background-color: white;
         }
 
-        .footer-item{
+        .img-movie{
+            display: inline-block;
+        }
+
+        #imdb{
+            border-radius: 70px;
+            display: flex;
+        }
+
+        #rating{
+            color: #ffc433;
+            font-size: 20px;
+            padding-left: 5px;
+        }
+
+        .rating-items{
             display: flex;
             justify-content: end;
             align-items: center;
-
         }
 
-        #span-text{
-            color: #EEE;
-            font-size: 10px;
-            padding-right: 5px;
-
-        }
-
-        #img-author{
-            width: 4%;
-            margin-right: 5px;
-        }
-
-        #link-github{
-            text-decoration: none;
-        }
     </style>
     <script type="text/javascript" charset="utf-8">
         // Pause the video when the modal is closed
@@ -138,17 +138,19 @@ main_page_content = '''
       {movie_tiles}
     </div>
   </body>
-  <footer class="footer-item">
-    <a id="link-github" href="https://github.com/DouglasCantao" target="_blank"><span id="span-text">Github: @DouglasCantao</span></a>
-    <img id="img-author" src="img/doug.jpeg"/>
-  </footer>
 </html>
 '''
 
 # A single movie entry html template
 movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
-    <img src="{poster_image_url}" width="220" height="342">
+    <div class="img-movie">
+        <img src="{poster_image_url}" width="220" height="342">
+            <div class="rating-items">
+                <img id="imdb" src="img/imdb_icon.jpg" width="50px" height="40px">
+                <span id="rating"><l4>{rating}</l4></span>
+            </div>
+    </div>
     <h2>{movie_title}</h2>
 </div>
 '''
@@ -166,7 +168,8 @@ def create_movie_tiles_content(movies):
         content += movie_tile_content.format(
             movie_title=movie.title,
             poster_image_url=movie.poster_image_url,
-            trailer_youtube_id=trailer_youtube_id
+            trailer_youtube_id=trailer_youtube_id,
+            rating=movie.get_rating()
         )
     return content
 
