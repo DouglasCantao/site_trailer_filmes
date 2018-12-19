@@ -26,7 +26,7 @@ python --version
 Após clonar o repositório para sua máquina, através do terminal ou CMD, navegue até a pasta do projeto e execute:
 
 ```
-python 'nome_do_arquivo_main_para_execução.py'
+python movie_center.py
 ```
 
 Caso não haja algum problema, o sistema será aberto em seu navegador e exibirá a capa do filme, o nome do filme.
@@ -39,6 +39,7 @@ Ao clicar em alguns dos filmes, o trailer será exibido.
 Disponível apenas na versão de desenvolvimento.
 
 ## Built With
+
 [Python 2.7](https://www.python.org/downloads/)
 
 [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
@@ -48,3 +49,4 @@ Disponível apenas na versão de desenvolvimento.
 [Bootstrap 3](https://getbootstrap.com/docs/3.3/)
 
 [IMDB](http://www.omdbapi.com/)
+
