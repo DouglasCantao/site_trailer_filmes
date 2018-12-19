@@ -3,6 +3,10 @@ from media import Movie
 import fresh_tomatoes
 
 
+'''
+Este módulo é responsável pela instanciação dos objetos Movie,
+chamada do serviço fresh_tomatoes e execução.'''
+
 final_fantasy = Movie('Final Fantasy',
                       'https://www.youtube.com/watch?v=wut2am39z-c',
                       'Continuando a história baseada no jogo de sucesso de ' +
@@ -28,7 +32,10 @@ inception = Movie('Inception',
                   'https://bit.ly/2C93RVC',
                   'tt1375666')
 
-
+# Criação da lista de objetos Movie para ser utilizado
+# como parâmetro no método open_movie_page
 movies = [django, final_fantasy, inception]
 
+# Execução do serviço responsável por gerar a webpage
+# com os filmes passados no parâmetro.
 fresh_tomatoes.open_movies_page(movies)
